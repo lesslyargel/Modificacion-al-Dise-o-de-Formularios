@@ -1,0 +1,120 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="02DatosPersonales.aspx.cs" Inherits="DatosPersonales" StylesheetTheme="Modal" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="cc1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .cssHeaderImg
+	    {
+	        background-image : url(../Imagenes/Menu4.png);
+        }
+        .style1
+        {
+            height: 26px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="form2" runat="server">
+    <table style="width:100%;">
+                        <tr>
+                            <td align="center">
+                                &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td align="center" >
+                <asp:Panel ID="pnlDatosPersonales" runat="server" Width="50%" CssClass="panelprincipal">
+                    <table style="width:100%;">
+                        <tr>
+                            <td colspan="2" align="center">
+                                <asp:Label ID="Label1" runat="server" CssClass="texto20" 
+                                    Text="Paso 2. Completar Registro"></asp:Label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right" width="40%" class="style1">
+                                <asp:Label ID="Label4" runat="server" CssClass="etiqueta10" 
+                                    Text="CI:"></asp:Label>
+                                <br />
+                            </td>
+                            <td align="left" width="60%" class="style1">
+                                <asp:TextBox ID="txtCI" runat="server" CssClass="texto10normal" Height="22px" 
+                                    Width="40%" MaxLength="20"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="txtCI_FilteredTextBoxExtender" runat="server" 
+                                    Enabled="True" FilterType="Numbers" TargetControlID="txtCI">
+                                </cc1:FilteredTextBoxExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <asp:Label ID="Label12" runat="server" CssClass="etiqueta10" 
+                                    style="text-align: left" Text="Nombres:"></asp:Label>
+                            </td>
+                            <td align="left">
+                                <asp:TextBox ID="txtNombres" runat="server" CssClass="texto10mayusculas" 
+                                    MaxLength="100" Width="60%"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="txtNombres_FilteredTextBoxExtender" 
+                                    runat="server" FilterType="Custom, LowercaseLetters, UppercaseLetters" 
+                                    TargetControlID="txtNombres" ValidChars=" ">
+                                </cc1:FilteredTextBoxExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <asp:Label ID="Label14" runat="server" CssClass="etiqueta10" 
+                                    Text="Apellido Paterno:"></asp:Label>
+                            </td>
+                            <td align="left">
+                                <asp:TextBox ID="txtApellidop" runat="server" CssClass="texto10mayusculas" 
+                                    MaxLength="50" Width="40%"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="txtApellidop_FilteredTextBoxExtender1" 
+                                    runat="server" FilterType=" Custom, LowercaseLetters, UppercaseLetters" 
+                                    TargetControlID="txtApellidop" ValidChars=" ">
+                                </cc1:FilteredTextBoxExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <asp:Label ID="Label3" runat="server" CssClass="etiqueta10" 
+                                    style="text-align: left" Text="Apellido Materno:"></asp:Label>
+                            </td>
+                            <td align="left">
+                                <asp:TextBox ID="txtApellidom" runat="server" CssClass="texto10mayusculas" 
+                                    MaxLength="50" Width="40%"></asp:TextBox>
+                                <cc1:FilteredTextBoxExtender ID="txtApellidom_FilteredTextBoxExtender1" 
+                                    runat="server" FilterType=" Custom, LowercaseLetters, UppercaseLetters" 
+                                    TargetControlID="txtApellidom" ValidChars=" ">
+                                </cc1:FilteredTextBoxExtender>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="2">
+                                    <asp:Button ID="btnRegistro3" runat="server" CssClass="boton150normal" 
+                                        onclick="btnRegistro3_Click" Text="2do. Paso" />
+                                    <tr>
+                                        <td align="center" colspan="2">
+                                            <asp:Label ID="lblObservaciones" runat="server" CssClass="texto10"></asp:Label>
+                                        </td>
+                                    </tr>
+                                </asp:Panel>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <cc1:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+                                </cc1:ToolkitScriptManager>
+                            </td>
+                        </tr>
+                    </table>
+                </asp:Panel>
+            </td>
+            <td>
+    </form>
+</body>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+
+using System.Collections.Generic;
+using Microsoft.Practices.EnterpriseLibrary.Data;
+using Microsoft.Practices.EnterpriseLibrary.Data.Sql;
+
+using System.Data.SqlClient;
+
+using Seguridad.Logica;
+//using wcfPersonal.Logica;
+
+using System.Drawing;
+
+public partial class DatosPersonales : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            txtCI.Text = Session["CI"].ToString();
+            VerDatos();
+        }
+
+        //Buscando si existe el CI paso por Session
+        VerDatos();
+    }
+    protected void VerDatos()
+    {
+        clsPersona tp1 = new clsPersona();
+        foreach (clsPersona tp2 in tp1.ObtenerPersonaCI(txtCI.Text))
+        {
+            txtCI.Text = tp2.CI;
+            txtNombres.Text = tp2.Nombres;
+            txtApellidop.Text = tp2.Paterno;
+            txtApellidom.Text = tp2.Materno;
+        }
+
+        //if (txtCI.Text != "")
+        //{
+        //    lblObservaciones.Text = "Probablemente ya fue registrado, si tienes problemas con su password comuniquese con el adminsitrador";
+        //}
+    }
+    protected void btnRegistro3_Click(object sender, EventArgs e)
+    {
+
+        if(txtNombres.Text.Length >= 3)
+        {
+            ////Pa armado login
+            string[] loginS;
+            string loginU, apellido;
+            ////
+
+            ////Generacion de Login Usuario y Password
+            loginS = txtNombres.Text.Split(' ');
+            if (txtApellidop.Text == "")
+            {
+                apellido = txtApellidom.Text;
+            }
+            else
+            {
+                apellido = txtApellidop.Text;
+            }
+            loginU = Convert.ToString(loginS[0]).ToLower() + '.' + apellido.ToLower();
+
+            if(apellido.Length >= 3)
+            {
+                //Adicionar Datos Personales del-Usuario
+                clsPersona adi = new clsPersona();
+                adi.AdicionarPersona(txtCI.Text, txtNombres.Text, txtApellidop.Text, txtApellidom.Text, 1, 1, 1, 1);
+                lblObservaciones.Text = "Adicion Satisfactoria ...";
+                //Adicionar Usuario
+                clsUsuarios adiu = new clsUsuarios();
+                adiu.AdicionarUsuario(txtNombres.Text.Trim() + ' ' + txtApellidop.Text.Trim() + ' ' + txtApellidom.Text.Trim(), loginU, txtCI.Text, 4, 0, 1); //provisionalmente el rol 3
+                lblObservaciones.Text = "Adicion Satisfactoria ......";
+                ////
+
+                Session["CI"] = txtCI.Text;
+                Session["loginU"] = loginU;
+
+                Response.Redirect("~/Auxiliar/03Contrato.aspx");
+            }
+            else
+            {
+                lblObservaciones.Text = "Ingrese un apellido valido";
+            }
+
+        }
+        else
+        {
+            lblObservaciones.Text = "Ingrese un nombre valido";
+        }
+
+    }
+}

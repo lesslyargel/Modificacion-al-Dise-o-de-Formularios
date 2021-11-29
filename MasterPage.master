@@ -1,0 +1,191 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+
+   </asp:ContentPlaceHolder>
+    <style type="text/css">
+                
+.panelxxx
+{   
+       
+    font-size: x-large;          
+    font-family: Arial;  
+    font-weight: bold; 
+    color: Purple; 
+         
+    border-color: White;
+    border-style: outset;
+    border-width: thin;
+    
+    elevation: higher;
+}
+	
+.panelpeque
+{   
+    font-size: x-small;          
+    font-family: Arial;  
+    font-weight: bold; 
+    color: Purple; 
+         
+    border-color: White;
+    border-style: outset;
+    border-width: thin;
+    
+    elevation: higher;
+}
+
+.panelprincipal
+{
+    background-color: #99CCCC;
+    
+    border-color: #006666;
+    border-style: solid;
+    border-width: thin;
+    
+    elevation: higher;
+ }
+ 
+.menu4
+{
+    background: url(../Imagenes/Menu4.png);
+}
+
+.menux
+{
+    background-image: url(../Imagenes/linea4.png); background-repeat: repeat-y;
+    text-align: Left; 
+}  
+
+  .paneloscuro
+ {
+    background-color: #b0e0e6;
+    
+    border-color: #669999;
+    border-style: solid;
+    border-width: thin;
+    
+    elevation: higher;
+  }
+  
+
+
+        .style4
+        {
+            height: 20px;
+        }
+        .style5
+        {
+            height: 40px;
+        }
+
+
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table align="center">
+            <tr>
+                <td align="center">
+                    <asp:Panel ID="pnlEncabezado" runat="server" Width="1200px" Height="100px" 
+                        BackImageUrl="~/Imagenes/Logos/Banner.png">
+                        <table style="width:100%;">
+                            <tr>
+                                <td align="left" class="style4">
+                                    <asp:Label ID="lblFecha" runat="server" Font-Bold="True" Font-Names="Arial" 
+                                        Font-Overline="False" Font-Size="Small" ForeColor="#FF3300" 
+                                        style="text-align: right" Text="Fecha"></asp:Label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" class="style5">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" class="style4">
+                                    <asp:Image ID="imgDW" runat="server" ImageUrl="~/Imagenes/usr16.png" />
+                                    <asp:Label ID="lblCodUU" runat="server" Font-Size="Small" Text="1" 
+                                        Visible="False"></asp:Label>
+                                    <asp:Label ID="lblCodRR" runat="server" Font-Size="Small" Text="1" 
+                                        Visible="False"></asp:Label>
+                                    <asp:Label ID="lblNombreCompleto" runat="server" Font-Bold="True" 
+                                        Font-Names="Arial" Font-Size="Small" ForeColor="#FF3300" 
+                                        style="text-align: left" Text="NombreCompleto"></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </asp:Panel>
+                </td>
+                <td">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td align="center" width="1200" class="paneloscuro">
+                    <asp:Menu ID="Menu" runat="server" Font-Names="Arial" Font-Size="8pt" 
+                        Font-Strikeout="False" ForeColor="Black" onmenuitemclick="Menu_MenuItemClick" 
+                        Orientation="Horizontal" CssClass="panelprincipal">
+                        <StaticMenuStyle Height="22px" HorizontalPadding="1px" VerticalPadding="1px" 
+                            Width="160px" BorderColor="#CCCCCC" BorderStyle="Solid" 
+                            BorderWidth="1px" />
+                        <StaticSelectedStyle Height="22px" HorizontalPadding="1px" ItemSpacing="1px" 
+                            VerticalPadding="1px" Width="160px" />
+                        <StaticMenuItemStyle Height="22px" HorizontalPadding="1px" ItemSpacing="1px" 
+                            VerticalPadding="1px" Width="160px" BorderColor="#CCCCCC" 
+                            BorderStyle="Solid" BorderWidth="1px" />
+                        <DynamicHoverStyle BackColor="#FFCC99" BorderColor="#666666" 
+                            BorderStyle="Solid" BorderWidth="1px" Height="22px" Width="160px" />
+                        <DynamicMenuStyle BorderColor="Black" BorderStyle="Solid" BorderWidth="1px" 
+                            CssClass="menux" HorizontalPadding="1px" VerticalPadding="1px" 
+                            Width="160px" BackColor="#CCFFCC" />
+                        <DynamicSelectedStyle Height="22px" HorizontalPadding="1px" ItemSpacing="1px" 
+                            VerticalPadding="1px" Width="160px" />
+                        <DynamicMenuItemStyle Font-Names="Arial" Font-Size="8pt" ForeColor="Black" 
+                            Height="22px" HorizontalPadding="8px" ItemSpacing="1px" VerticalPadding="1px" 
+                            Width="160px" BorderColor="#999999" 
+                            BorderStyle="Solid" BorderWidth="1px" />
+                        <StaticHoverStyle BackColor="#FFCC99" BorderColor="#000099" BorderStyle="Solid" 
+                            BorderWidth="1px" Height="22px" Width="160px" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" width="1200">
+                    <asp:Panel ID="pnlCPH" runat="server" Width="100%" CssClass="paneloscuro">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </asp:Panel>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" width="1200" class="paneloscuro">
+                    <asp:Label ID="lblDerechosReservados" runat="server" Font-Size="10pt" 
+                        Text="Derechos Reservados" Font-Names="Arial"></asp:Label>
+                    &nbsp;<asp:HyperLink ID="HyperLink1" runat="server" Font-Names="Arial" Font-Size="10pt" 
+                        NavigateUrl="http://www.ine.gob.bo">UERBO</asp:HyperLink>
+                    &nbsp;<asp:Label ID="Label1" runat="server" Font-Names="arial" Font-Size="10pt" 
+                        Text="2021"></asp:Label>
+                    <br />
+                    <asp:Label ID="lblUltimaActualización" runat="server" Font-Size="10pt" 
+                        Text="Ultima Actualización: 29/11/2021" Font-Names="Arial" ToolTip="Lessly Mollinedo Laura"></asp:Label>
+                                    &nbsp;<asp:Label ID="Label4" runat="server" CssClass="panelpeque" 
+                                        Text="LM" Width="5%" 
+                        ToolTip="Creacion: Lessly Mollinedo Laura"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"> </asp:ToolkitScriptManager>
+                </td>
+            </tr>
+            </table>
+    </div>
+    </form>
+</body>
+</html>

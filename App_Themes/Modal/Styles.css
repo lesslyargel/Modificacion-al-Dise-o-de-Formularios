@@ -1,0 +1,283 @@
+﻿.dw2008
+{
+}
+
+.boton50
+{
+    height: 20px;
+    width: 50px;
+    
+    font-family: Arial;
+    font-size: xx-small;    
+    text-align: center;
+}
+.boton100
+{
+    height: 20px;
+    width: 100px;
+    
+    font-family: Arial;
+    font-size: xx-small;    
+    text-align: center;
+}
+
+.boton150color
+{
+    height: 25px;
+    width: 150px;
+    
+    font-family: Arial;
+    font-size: small;  
+    text-align: center;   
+      
+    background-coloR: #99FFFF;
+}
+
+.boton150normal
+{
+    height: 25px;
+    width: 150px; 
+    
+    font-size: small;    
+    font-family: Arial;
+    text-align: center;     
+}
+
+.cssHeader
+{
+	background-color : #dfecff;
+	background-image : url(images/Menu4.png);
+    color: WindowText;
+    font-size: 8pt;     font-family: Arial;    font-weight: normal;
+    text-align: center;
+}
+
+.etiqueta8
+{
+    color: Black;  
+        
+    font-family: Arial;
+    font-size: small;  
+    text-align: left;
+    height: 22px;
+}
+
+.etiqueta10
+{
+    color: Black;     
+       
+    font-family: Arial;  
+    font-size: medium;      
+    text-align: left;
+    height: 22px;
+}
+
+.etiqueta10azul
+{
+    color: Blue;     
+       
+    font-family: Arial;  
+    font-size: medium;      
+    text-align: left;
+    height: 22px;
+}
+
+.text_obs
+{
+    color: Black;  
+            
+    font-family: Arial;
+    font-size: small;      
+    text-align: left;
+    height: 22px;
+}
+
+.texto8
+{
+    color: Black;     
+             
+    font-family: Arial;     
+    font-size: x-small;      
+    text-align: left;
+    height: 22px;
+    
+    background: PapayaWhip;  
+}
+
+.texto8normal
+{
+    color: Black;
+    
+    font-family: Arial;                  
+    font-size: x-small;      
+    text-align: left;
+    height: 22px;
+}
+
+.texto8mayusculas
+{
+    color: Black;   
+           
+    font-family: Arial;
+    font-size: x-small;    
+    text-align: left;
+    height: 22px;
+    
+    text-transform: uppercase;
+    background: PapayaWhip; 
+    
+}
+
+.texto10
+{
+    color: Black;  
+            
+    font-family: Arial;
+    font-size: small;      
+    text-align: left;
+    height: 22px;
+    
+    margin-bottom: 0px;
+}
+
+.texto12
+{
+    color: Black;  
+            
+    font-family: Arial;
+    font-size: medium; 
+    text-align: left;
+    height: 22px;
+    
+    margin-bottom: 0px;
+}
+
+.texto20
+{
+    color: Black;  
+            
+    font-family: Arial;
+    font-size: larger;      
+    text-align: left;
+    height: 22px;
+    
+    margin-bottom: 0px;
+}
+
+.texto10normal
+{
+    color: Black;     
+         
+    font-family: Arial;
+    font-size: small;       
+    text-align: left;
+    height: 22px;
+    
+    margin-right: 0px;
+    background: PapayaWhip;
+}
+
+.texto10mayusculas
+{
+    color: Black;      
+        
+    font-family: Arial;
+    font-size: small;      
+    text-align: left;
+    height: 22px;
+    
+    text-transform: uppercase;
+    background: PapayaWhip; 
+}
+
+.modalBackground
+{
+	background-color: Black;
+	filter: alpha(opacity=50);
+	opacity: 0.50;
+}
+
+.modalPopup
+{
+	background-color:White;
+    color: Black;
+}
+
+.modalPopup div
+{
+    margin: 5px;
+    text-align: center;
+}
+
+.paginadiv
+{
+    background: #ffffdd;
+}
+
+.panelprincipal
+{
+    /*background-color: #B0E0E6;
+    background-color: #0080FF;*/
+    background-color: #D8D8D8;
+    
+    border-color: #00BFFF;
+    border-style: solid;
+    border-width: thin;
+    
+    elevation: higher;
+}
+ 
+.panelsecundario
+{
+    background-color: #FFDEAD;
+    
+    border-color: #FF6347;
+    border-style: solid;
+    border-width: thin;
+    
+    elevation: higher;
+}
+  
+.paneloscuro
+{
+    background-color: #D3D3D3;
+    
+    border-color: #669999;
+    border-style: solid;
+    border-width: thin;
+    
+    elevation: higher;
+}
+  
+.water4
+{
+     font-size: x-small; 
+     color: Gray   
+}
+
+.completionListElement 
+{  
+    visibility : hidden; 
+    margin : 0px! important; 
+    background-color: Navy;
+    color : black; 
+    border : solid 1px gray; 
+    cursor : pointer; 
+    text-align : left; 
+    list-style-type : none; 
+    font-family : Arial; 
+    font-size: xx-small;
+    padding : 0; 
+}
+
+.listItem 
+{ 
+    background-color: White; 
+    padding : 1px; 
+}   
+   
+.highlightedListItem 
+{ 
+    background-color: Yellow;
+    padding : 1px; 
+}

@@ -1,0 +1,26 @@
+﻿<asp:GridView SkinID="GridView" runat="server" 
+    CellPadding="3" 
+    Font-Size="Small" 
+    Font-Names="Arial"
+    style="text-align: left" 
+    AllowSorting="True" 
+    GridLines="None"
+    Background = "#dfecff"
+    Color = "WindowText"
+    Width = "100%"
+    Border = "1px"/>
+
+<asp:GridView SkinID="GridView2" runat="server" 
+    CellPadding="3" 
+    Font-Size="x-Small" 
+    Font-Names="Arial"
+    style="text-align: left" 
+    AllowSorting="True" 
+    GridLines="None"
+    Background = "#dfecff"
+    Color = "WindowText"
+    Width = "100%"
+    Border = "1px"/>
+
+	
+	
